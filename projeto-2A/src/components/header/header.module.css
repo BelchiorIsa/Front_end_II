@@ -1,0 +1,14 @@
+
+.li{
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    list-style-type: none;
+    background-color: rgb(214, 127, 195);
+    font-style: italic;
+    font-weight: bold;
+   
+}

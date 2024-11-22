@@ -4,9 +4,7 @@
     export default function sobre(){
     return(
         <main>
-            <h1>Sobre</h1>
-            <p className= {styles.paragrafo}>Minha segunda página do homem aranha</p>
-            <p id= {styles.paragrafoUnico}> Meu págrafo especial</p>
+            <h1>Sobre nós</h1>
         </main>
     )
 }

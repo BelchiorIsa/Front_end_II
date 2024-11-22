@@ -1,12 +1,12 @@
 :root {
-  --background: #ffffff;
+  --background: #e1b9d2;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #e1b9d2;
   }
 }
 
@@ -36,9 +36,10 @@ a {
 }
 
 h1{
-  color: red;
+  color:#8b09b2 ;
   font-weight: bold;
   text-align: center;
+  font-style: italic;
 
 }
 
