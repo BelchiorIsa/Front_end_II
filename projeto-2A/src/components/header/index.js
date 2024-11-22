@@ -1,8 +1,15 @@
+'use client';
 import Link from "next/link"
+import { useState} from "react"
+;
 export default function Header(){
+    const [showMenu, setShowMenu] = useState(false)//aparece, e true some
     return(
         <header>
-            <nav>
+            <button onClick={()=>setShowMenu(!showMenu)}>Clique</button>
+            {
+                showMenu && //&& (define se mostra a nav a partir do booleano) 
+                <nav>
                 <ul>
                     <li><Link href='/home'>Home</Link></li>
                     <li><Link href='/sobre'>Sobre</Link></li>
@@ -11,7 +18,8 @@ export default function Header(){
                 </ul>
                 
             </nav>
-
+            }
         </header>
+            
     )
 }
