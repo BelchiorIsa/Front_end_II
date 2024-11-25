@@ -1,24 +1,24 @@
 :root {
-  --background: #e1b9d2;
+  --background: rgba(222, 186, 224, 0.856);
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #e1b9d2;
+    --foreground: rgba(222, 186, 224, 0.856);
   }
 }
 
 html,
 body {
+  background-color: rgba(222, 186, 224, 0.856);
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

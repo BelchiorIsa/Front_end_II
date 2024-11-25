@@ -1,4 +1,4 @@
-
+/* 
 .li{
     padding: 12px;
     display: flex;
@@ -11,4 +11,38 @@
     font-style: italic;
     font-weight: bold;
    
+} */
+.li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    list-style-type: none;
+    background-color: #e1b9d2;
+    border-radius: 5px;
+    height: 40px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f4f4f4;
+}
+
+.menuButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #b7ceda;
+}
+
+.me {
+    border-radius: 5px;
 }
