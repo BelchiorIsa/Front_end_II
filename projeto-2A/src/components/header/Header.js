@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import styles from "./header.module.css"
+import styles from "./Header.module.css"
 import { useState } from "react";
 import Image from "next/image";
 
@@ -33,8 +33,11 @@ export default function Header() {
                         />
                         <li><Link href='/'>Home</Link></li>
                         <li><Link href='/sobre'>Sobre</Link></li>
-                        <li><Link href='/listas'>Disponiveis</Link></li>
+                        {/* <li><Link href='/listas'>Disponiveis</Link></li> */}
                         <li><Link href='/contato'>Contato</Link></li>
+                        <li><Link href='/props'>Props</Link></li>
+                        <li><Link href='/filter'>Filter</Link></li>
+                        
                         
                     </ul>
                 </nav>
