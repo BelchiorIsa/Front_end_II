@@ -19,7 +19,7 @@
     justify-content: center;
     gap: 12px;
     list-style-type: none;
-    background-color: #e1b9d2;
+    background-color: #668170;
     border-radius: 5px;
     height: 40px;
     color: #fff;
@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #f4f4f4;
+    background-color:  #668170;
 }
 
 .menuButton {
@@ -40,7 +40,7 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #b7ceda;
+    color: rgba(186, 224, 219, 0.856);
 }
 
 .me {

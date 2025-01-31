@@ -26,9 +26,9 @@ export default function Header() {
                 <nav>
                     <ul className={styles.li}>
                         <img className={styles.me}
-                            src="/BD2.png"
+                            src="/Clínica.png"
                             alt="menu"
-                            width={75}
+                            width={80}
                             height={40}
                         />
                         <li><Link href='/'>Home</Link></li>
