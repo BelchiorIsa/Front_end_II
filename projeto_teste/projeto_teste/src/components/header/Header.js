@@ -1,47 +1,38 @@
 'use client';
 import Link from "next/link";
-import styles from "./Header.module.css"
+import styles from "./Header.module.css";
 import { useState } from "react";
 import Image from "next/image";
 
-
-
 export default function Header() {
-    const [showMenu, setShowMenu] = useState(true)
+    const [showMenu, setShowMenu] = useState(true);
     return (
-        <header>
-            <button onClick={() => setShowMenu(!showMenu)}>
+        <header className={styles.header}>
+            <button className={styles.menuButton} onClick={() => setShowMenu(!showMenu)}>
                 <Image className={styles.rat}
                     src="/menu.png"
                     alt="Ícone do menu"
-                    width={30}
-                    height={30}
-
+                    width={40} 
+                    height={40} 
                 />
             </button>
             {
-
                 showMenu &&
-
                 <nav>
                     <ul className={styles.li}>
                         <img className={styles.me}
                             src="/Clínica.png"
                             alt="menu"
-                            width={80}
-                            height={40}
+                            width={150} // Aumentado mais
+                            height={80} // Aumentado mais
                         />
                         <li><Link href='/'>Home</Link></li>
                         <li><Link href='/medico'>Médico</Link></li>
                         <li><Link href='/paciente'>Paciente</Link></li>
-                        {/* <li><Link href='/listas'>Disponiveis</Link></li> */}
                         <li><Link href='/consulta'>Consulta</Link></li>
-                       
-                        
-                        
                     </ul>
                 </nav>
             }
         </header>
-    )
-} 
+    );
+}
