@@ -1,5 +1,5 @@
 import './globals.css'; 
-import Header from '../components/Header'; 
+import Header from '@/components/Headers'; 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt">
