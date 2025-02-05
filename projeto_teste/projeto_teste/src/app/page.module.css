@@ -1,14 +1,32 @@
 .container {
-    text-align: center;
-    padding: 20px;
-  }
-  
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #666;
+  font-size: 2em;
+}
+
+
+@media (max-width: 768px) {
   .title {
-    color: #333;
-    font-size: 2em;
+    font-size: 1.5em;
   }
-  
+
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
   .title {
-    color: #666;
     font-size: 1.2em;
   }
+
+  .container {
+    padding: 10px;
+  }
+}
