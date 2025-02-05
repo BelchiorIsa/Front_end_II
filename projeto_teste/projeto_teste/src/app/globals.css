@@ -56,7 +56,6 @@ a:hover {
   color: #ffffff;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .page-container {
     padding: 10px;

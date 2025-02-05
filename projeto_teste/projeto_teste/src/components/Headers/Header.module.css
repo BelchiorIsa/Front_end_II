@@ -1,5 +1,5 @@
 .navbar {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #668170;
   padding: 10px 20px;
   display: flex;
@@ -14,24 +14,25 @@
 .menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .menu li {
   position: relative;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Arial', sans-serif;
   padding: 10px 15px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  
 }
 
 
 .menu li:hover {
   background-color: #668170;
   transform: scale(1.1);
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 
@@ -83,7 +84,7 @@
   }
   
   .menu li {
-    padding: 8px 10px;
+    padding: 10px 10px;
   }
 }
 
