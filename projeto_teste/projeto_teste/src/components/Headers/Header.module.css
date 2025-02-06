@@ -1,21 +1,25 @@
 .navbar {
-  font-family: 'Arial', sans-serif;
+  font-family: 'italic', sans-serif;
   background-color: #668170;
   padding: 10px 20px;
   display: flex;
+  flex-direction: column; /* Adicionado */
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Alterado */
 }
 
 .logo img {
   height: 200px;
+  margin-bottom: 20px; 
 }
 
 .menu {
   list-style: none;
   display: flex;
   gap: 30px;
-}
+  justify-content: center;
+ }
+
 
 .menu li {
   position: relative;

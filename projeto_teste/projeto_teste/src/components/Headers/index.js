@@ -29,7 +29,7 @@ const Header = () => {
   Médicos
   {activeMenu === "medicos" && (
     <ul className={styles.dropdown}>
-      <li><a href="/medicos/listar">Listar</a></li>
+      <li><a href="/medicos/listar">Listar </a></li>
       <li><a href="/medicos/adicionar">Adicionar</a></li>
       <li><a href="/medicos/editar">Editar</a></li>
       <li><a href="/medicos/excluir">Excluir</a></li>
