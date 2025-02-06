@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -20,55 +21,55 @@ const Header = () => {
       </div>
 
       <ul className={styles.menu}>
-      <li><a href="/">Home</a></li>
+        <li><Link href="/">Home</Link></li>
 
-<li 
-  onMouseEnter={() => handleMouseEnter("medicos")} 
-  onMouseLeave={handleMouseLeave}
->
-  Médicos
-  {activeMenu === "medicos" && (
-    <ul className={styles.dropdown}>
-      <li><a href="/medicos/listar">Listar </a></li>
-      <li><a href="/medicos/adicionar">Adicionar</a></li>
-      <li><a href="/medicos/editar">Editar</a></li>
-      <li><a href="/medicos/excluir">Excluir</a></li>
-    </ul>
-  )}
-</li>
+        <li 
+          onMouseEnter={() => handleMouseEnter("medicos")} 
+          onMouseLeave={handleMouseLeave}
+        >
+          Médicos
+          {activeMenu === "medicos" && (
+            <ul className={styles.dropdown}>
+              <li><Link href="/medico/listar">Listar</Link></li>
+              <li><Link href="/medico/adicionar">Adicionar</Link></li>
+              <li><Link href="/medico/editar">Editar</Link></li>
+              <li><Link href="/medico/excluir">Excluir</Link></li>
+            </ul>
+          )}
+        </li>
 
-<li 
-  onMouseEnter={() => handleMouseEnter("pacientes")} 
-  onMouseLeave={handleMouseLeave}
->
-  Pacientes
-  {activeMenu === "pacientes" && (
-    <ul className={styles.dropdown}>
-      <li><a href="/pacientes/listar">Listar</a></li>
-      <li><a href="/pacientes/adicionar">Adicionar</a></li>
-      <li><a href="/pacientes/editar">Editar</a></li>
-      <li><a href="/pacientes/excluir">Excluir</a></li>
-    </ul>
-  )}
-</li>
+        <li 
+          onMouseEnter={() => handleMouseEnter("pacientes")} 
+          onMouseLeave={handleMouseLeave}
+        >
+          Pacientes
+          {activeMenu === "pacientes" && (
+            <ul className={styles.dropdown}>
+              <li><Link href="/paciente/listar">Listar</Link></li>
+              <li><Link href="/pacientes/adicionar">Adicionar</Link></li>
+              <li><Link href="/pacientes/editar">Editar</Link></li>
+              <li><Link href="/pacientes/excluir">Excluir</Link></li>
+            </ul>
+          )}
+        </li>
 
-<li 
-  onMouseEnter={() => handleMouseEnter("consultas")} 
-  onMouseLeave={handleMouseLeave}
->
-  Consultas
-  {activeMenu === "consultas" && (
-    <ul className={styles.dropdown}>
-      <li><a href="/consultas/listar">Listar Consultas</a></li>
-      <li><a href="/consultas/agendar">Agendar Consulta</a></li>
-      <li><a href="/consultas/editar">Editar Agendamento</a></li>
-      <li><a href="/consultas/cancelar">Cancelar</a></li>
-    </ul>
-  )}
-</li>
-</ul>
-</nav>
-);
+        <li 
+          onMouseEnter={() => handleMouseEnter("consultas")} 
+          onMouseLeave={handleMouseLeave}
+        >
+          Consultas
+          {activeMenu === "consultas" && (
+            <ul className={styles.dropdown}>
+              <li><Link href="/consultas/listar">Listar Consultas</Link></li>
+              <li><Link href="/consultas/agendar">Agendar Consulta</Link></li>
+              <li><Link href="/consultas/editar">Editar Agendamento</Link></li>
+              <li><Link href="/consultas/cancelar">Cancelar</Link></li>
+            </ul>
+          )}
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Header;
