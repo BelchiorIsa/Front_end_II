@@ -60,7 +60,7 @@ const Header = () => {
           Consultas
           {activeMenu === "consultas" && (
             <ul className={styles.dropdown}>
-              <li><Link href="/consultas/listar">Listar Consultas</Link></li>
+              <li><Link href="/consulta/listar">Listar Consultas</Link></li>
               <li><Link href="/consultas/agendar">Agendar Consulta</Link></li>
               <li><Link href="/consultas/editar">Editar Agendamento</Link></li>
               <li><Link href="/consultas/cancelar">Cancelar</Link></li>
