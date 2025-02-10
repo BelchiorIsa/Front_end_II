@@ -1,64 +1,55 @@
-'use client'
-import { useState } from "react";
+'use client';
+import { useState, useEffect } from "react";
 
 export default function ListarConsulta() {
-  const consultas = [
-    { id: 1, medico: "Dr. João Silva", especialidade: "Cardiologista", paciente: "Fernando Martins", tipo: "Plano de Saúde" },
-    { id: 2, medico: "Dra. Maria Souza", especialidade: "Cardiologista", paciente: "Luanna Ribeiro", tipo: "Particular" },
-    { id: 3, medico: "Dr. Carlos Mendes", especialidade: "Ortopedista", paciente: "Camilly Queiroz", tipo: "Plano de Saúde" },
-    { id: 4, medico: "Dra. Ana Oliveira", especialidade: "Pediatra", paciente: "Antonio Lima", tipo: "Particular" },
-    { id: 5, medico: "Dr. Pedro Lima", especialidade: "Neurologista", paciente: "Junior Souza", tipo: "Plano de Saúde" },
-    { id: 6, medico: "Dra. Juliana Rocha", especialidade: "Ginecologista", paciente: "Fatima De Limma", tipo: "Plano de Saúde" },
-    { id: 7, medico: "Dr. Ricardo Alves", especialidade: "Psiquiatra", paciente: "Roberta Pardo", tipo: "Particular" },
-    { id: 8, medico: "Dra. Fernanda Costa", especialidade: "Oftalmologista", paciente: "Ana julia Pereira", tipo: "Plano de Saúde" },
-    { id: 9, medico: "Dr. Lucas Martins", especialidade: "Urologista", paciente: "Pedro Mattos", tipo: "Plano de Saúde" },
-    { id: 10, medico:"Dra. Beatriz Nunes", especialidade: "Endocrinologista" , paciente: "Bianca Nunes", tipo: "Particular" },
-  ];
+  const [consultas, setConsultas] = useState([]);
+  const [buscaPaciente, setBuscaPaciente] = useState("");
+  const [buscaMedico, setBuscaMedico] = useState("");
 
-  const [busca, setBusca] = useState("");
-  const [consultasFiltrados, setconsultasFiltrados] = useState(consultas);
+  useEffect(() => {
+    fetch("https://api-clinica-2a.onrender.com/consultas")
+      .then((response) => response.json())
+      .then((data) => setConsultas(data))
+      .catch((error) => console.error("Erro ao buscar consultas:", error));
+  }, []);
 
-  const handleSearch = (e) => {
-    const valorBusca = e.target.value;
-    setBusca(valorBusca);
-
-    const filtrados = consultas.filter((consulta) =>
-      consulta.nome.toLowerCase().includes(valorBusca.toLowerCase())
-    );
-    setconsultasFiltrados(filtrados);
-  };
+  const consultasFiltradas = consultas.filter(
+    (consulta) =>
+      consulta.paciente.toLowerCase().includes(buscaPaciente.toLowerCase()) &&
+      consulta.medico.toLowerCase().includes(buscaMedico.toLowerCase())
+  );
 
   return (
     <div style={{ padding: "20px" }}>
       <h1>Lista de Consultas</h1>
-      {/* <div>
-        <input
-          type="text"
-          placeholder="Buscar paciente por nome"
-          value={busca}
-          onChange={handleSearch}
-        />
-      </div>
       <div>
         <input
           type="text"
-          placeholder="Buscar medico por nome"
-          value={busca}
-          onChange={handleSearch}
+          placeholder="Buscar paciente por nome"
+          value={buscaPaciente}
+          onChange={(e) => setBuscaPaciente(e.target.value)}
         />
-      </div> */}
+      </div>
+      <div style={{ marginTop: "10px" }}>
+        <input
+          type="text"
+          placeholder="Buscar médico por nome"
+          value={buscaMedico}
+          onChange={(e) => setBuscaMedico(e.target.value)}
+        />
+      </div>
       <table border="1" width="100%" style={{ borderCollapse: "collapse", marginTop: "20px" }}>
         <thead>
           <tr style={{ backgroundColor: "#ddd" }}>
             <th>ID</th>
-            <th>Medico</th>
-            <th>especialidade</th>
+            <th>Médico</th>
+            <th>Especialidade</th>
             <th>Paciente</th>
             <th>Tipo</th>
           </tr>
         </thead>
         <tbody>
-          {consultasFiltrados.map((consulta) => (
+          {consultasFiltradas.map((consulta) => (
             <tr key={consulta.id}>
               <td>{consulta.id}</td>
               <td>{consulta.medico}</td>

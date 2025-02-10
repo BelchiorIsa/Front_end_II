@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #f0f8ff;
@@ -59,39 +58,9 @@ a:hover {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .page-container {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  ul li {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  .btn {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-  }
-}
-
-
 table {
-  width: 90%;
+  width: 100%;
+  max-width: 90%;
   border-collapse: collapse;
   margin: 20px auto;
   background-color: #e7f5e7;
@@ -118,25 +87,6 @@ table tr:hover {
   background-color: #dce7dc;
 }
 
-@media (max-width: 768px) {
-  table {
-    width: 100%;
-  }
-  
-  table th, table td {
-    padding: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  table th, table td {
-    padding: 6px;
-  }
-
-  table {
-    font-size: 0.9rem;
-  }
-}
 button {
   background-color: #ffffff;
   color: #668170;
@@ -153,16 +103,50 @@ button:hover {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  button {
+@media screen and (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  .btn, button {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
+
+  table {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  table th, table td {
+    padding: 8px;
+  }
 }
 
-@media (max-width: 480px) {
-  button {
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn, button {
     padding: 6px 12px;
     font-size: 0.8rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+    overflow-x: auto;
+  }
+
+  table th, table td {
+    padding: 6px;
   }
 }
