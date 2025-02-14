@@ -37,6 +37,7 @@ export default function ListarMedicos() {
           onChange={handleSearch}
         />
       </div>
+      <div style={{width: "100%", overflowX: "auto"}}>
       <table border="1" width="100%" style={{ borderCollapse: "collapse", marginTop: "20px" }}>
         <thead>
           <tr style={{ backgroundColor: "#ddd" }}>
@@ -59,6 +60,7 @@ export default function ListarMedicos() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
