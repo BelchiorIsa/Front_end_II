@@ -10,9 +10,6 @@ export default function Page() {
       <p className={styles.description}>
         Nossa equipe de profissionais altamente qualificados está pronta para oferecer os melhores tratamentos e orientações personalizadas para você e sua família. Se você busca atenção especializada, confiança e cuidado de excelência, você está no lugar certo!
       </p>
-      <p className={styles.description}>
-        Na Clínica Belchior, seu sorriso e saúde nos movem a cada dia. Venha viver a experiência de um atendimento único, onde a sua saúde é tratada com o carinho que você merece.
-      </p>
       <div style={{width: "100%", overflowX: "auto"}}>
       <div className={styles.image}>
         <img src="/medico_img.png" alt="imagem" />
